@@ -11,7 +11,12 @@ const RootIndex = () => {
         data={tasks}
         renderItem={({ item }) => <TaskListItem task={item} />}
         numColumns={2}
-        className="px-2 bg-blue-700 py-2"
+        columnWrapperStyle={{
+          paddingHorizontal: 4,
+          paddingVertical: 5,
+          // marginTop: 2,
+        }}
+        className="bg-blue-700 pb-2"
       />
       <StatusBar style="dark" />
     </>
