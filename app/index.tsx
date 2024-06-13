@@ -10,6 +10,8 @@ const RootIndex = () => {
       <FlatList
         data={tasks}
         renderItem={({ item }) => <TaskListItem task={item} />}
+        numColumns={2}
+        className="px-2 bg-blue-700 py-2"
       />
       <StatusBar style="dark" />
     </>
