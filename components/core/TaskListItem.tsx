@@ -1,5 +1,4 @@
 import { View, Text, Pressable } from "react-native";
-import React from "react";
 import { Link } from "expo-router";
 
 type TaskListItem = {
@@ -8,9 +7,9 @@ type TaskListItem = {
 
 const TaskListItem = ({ task }: TaskListItem) => {
   return (
-    <Link href={`/task${task}`} asChild>
-      <Pressable>
-        <Text>{task}</Text>
+    <Link href={`/tasks/task-${task}`} asChild>
+      <Pressable className="aspect-square flex-1 bg-[#32cd32] border-2 border-white justify-center items-center rounded-2xl">
+        <Text className="text-[#ffd700] text-8xl">{task}</Text>
       </Pressable>
     </Link>
   );
