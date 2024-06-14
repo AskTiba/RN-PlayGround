@@ -18,6 +18,7 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    RubikGlitchPro: require("../assets/fonts/RubikGlitchPop-Regular.ttf"),
   });
 
   useEffect(() => {
@@ -31,9 +32,12 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DefaultTheme : DarkTheme}>
+    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="index" options={{ title: "Tasks", headerTitleAlign: "center" }} />
+        <Stack.Screen
+          name="index"
+          options={{ title: "Tasks", headerTitleAlign: "center" }}
+        />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>

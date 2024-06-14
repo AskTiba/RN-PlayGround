@@ -49,7 +49,7 @@ const CountDown = ({ targetDate }: CountdownProps) => {
     >
       <BlurView
         tint="dark"
-        intensity={80}
+        intensity={90}
         className=" mb-[18%] mx-3 flex flex-row justify-center items-center 
     rounded-md divide-white divide-x-[1px] bg-transparent overflow-hidden"
       >
