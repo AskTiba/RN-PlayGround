@@ -6,7 +6,9 @@
       "@/*": ["./*"],
       "@app/*": ["./app/*"],
       "@components/*": ["./components/*"],
-      "@assets/*": ["./assets/*"]
+      "@assets/*": ["./assets/*"],
+      "@storybook/*": ["./storybook/*"]
+
     }
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
