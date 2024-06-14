@@ -7,9 +7,11 @@ import CountDown from "@/components/core/CountDown";
 const index = () => {
   return (
     <View className="">
-      <Stack.Screen options={{ title: "Count Down", headerTitleAlign: "center" }} />
+      <Stack.Screen
+        options={{ title: "Count Down", headerTitleAlign: "center" }}
+      />
       <StatusBar style="auto" />
-      <CountDown targetDate="2024-06-14T21:59:59" />
+      <CountDown targetDate="2024-08-25T21:59:59" />
     </View>
   );
 };
