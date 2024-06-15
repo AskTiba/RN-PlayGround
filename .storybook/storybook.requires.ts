@@ -8,6 +8,8 @@ import {
 
 import "@storybook/addon-ondevice-controls/register";
 import "@storybook/addon-ondevice-actions/register";
+import "@storybook/addon-links/register";
+import "@storybook/addon-essentials/register";
 
 const normalizedStories = [
   {

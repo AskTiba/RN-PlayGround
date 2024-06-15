@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
+    "reset-project": "node./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -16,6 +16,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~3.2.1",
     "@expo/vector-icons": "^14.0.0",
     "@react-navigation/native": "^6.0.2",
     "expo": "~51.0.13",
@@ -48,6 +49,7 @@
     "@react-native-community/datetimepicker": "^8.1.0",
     "@react-native-community/slider": "^4.5.2",
     "@storybook/addon-ondevice-actions": "^7.6.20",
+    "@storybook/addon-ondevice-backgrounds": "^7.6.20",
     "@storybook/addon-ondevice-controls": "^7.6.20",
     "@storybook/addon-styling-webpack": "^1.0.0",
     "@storybook/addon-themes": "^8.1.9",
