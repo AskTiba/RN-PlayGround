@@ -4,7 +4,7 @@
     "slug": "RN-PlayGround",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/cup.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.asktiba.RNPlayGround"
     },
     "android": {
       "adaptiveIcon": {
@@ -40,6 +41,7 @@
       "eas": {
         "projectId": "cbaa4844-ea91-4550-9110-3dbc35c509a4"
       }
-    }
+    },
+    "owner": "asktiba"
   }
 }
