@@ -18,6 +18,7 @@ const RootIndex = () => {
         }}
         className="bg-blue-700 pb-2"
       />
+      
       <StatusBar style="auto" />
     </>
   );
