@@ -1,12 +1,13 @@
 import { View, Text } from "react-native";
 import React from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { router } from "expo-router";
 
 type ButtonProps = React.HTMLAttributes<HTMLButtonElement>;
 
 export default function Button(props: ButtonProps) {
   const loginWithFacebook = () => {
-    console.warn("Why are you gay");
+    router.push("./reanimate");
   };
 
   return (
@@ -17,7 +18,7 @@ export default function Button(props: ButtonProps) {
         onPress={loginWithFacebook}
         className="border-2 border-green-600"
       >
-        Login with Facebook
+        <Text className="text-xl font-extrabold px-2">Go & reanimate</Text>
       </FontAwesome.Button>
     </View>
   );
