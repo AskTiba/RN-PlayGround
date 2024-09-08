@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "InnoNative",
+    "name": "ModX",
     "slug": "RN-PlayGround",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/think.png",
+    "icon": "./assets/images/brain.png",
     "scheme": "myapp",
     "userInterfaceStyle": "light",
     "splash": {

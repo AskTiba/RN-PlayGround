@@ -11,7 +11,7 @@ export default function index() {
       // Set a timer to navigate to the next screen after a fixed duration
       const timer = setTimeout(() => {
         router.push("./signUp"); // Replace 'NextScreen' with your target screen
-      }, 5000); // Duration in milliseconds (3000ms = 3 seconds)
+      }, 1000); // Duration in milliseconds (3000ms = 3 seconds)
 
       // Cleanup the timer when the screen is unfocused
       return () => clearTimeout(timer);
