@@ -101,7 +101,7 @@ const AdaptiveButton: React.FC<AdaptiveButtonProps> = ({
     const variantStyles = {
       primary: theme?.primary || "text-white",
       secondary: theme?.secondary || "text-gray-800",
-      outline: theme?.outline || "text-blue-500",
+      outline: theme?.outline || "text-[#333533]",
       danger: theme?.danger || "text-red-500",
       success: theme?.success || "text-white",
       warning: theme?.warning || "text-yellow-500",
