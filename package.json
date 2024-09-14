@@ -44,7 +44,10 @@
     "react-native-screens": "3.31.1",
     "react-native-svg": "^15.6.0",
     "react-native-web": "~0.19.10",
-    "@gorhom/bottom-sheet": "^4"
+    "@gorhom/bottom-sheet": "^4",
+    "expo-auth-session": "~5.5.2",
+    "expo-crypto": "~13.0.2",
+    "eas-cli": "12.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

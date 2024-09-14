@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/brain.png",
-    "scheme": "myapp",
+    "scheme": "modx",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/images/3dRender.png",
