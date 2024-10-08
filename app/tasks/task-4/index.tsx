@@ -1,15 +1,16 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Stack } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const index = () => {
   return (
-    <View>
+    <SafeAreaView className="">
       <Stack.Screen
         options={{ title: "Story Book", headerTitleAlign: "center" }}
       />
       <Text>index</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

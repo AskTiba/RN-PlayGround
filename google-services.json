@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286481724801",
+    "project_id": "modx-42ead",
+    "storage_bucket": "modx-42ead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286481724801:android:36f2fc13ed73e42fb82480",
+        "android_client_info": {
+          "package_name": "com.asktiba.RNPlayGround"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIzmy3cIax0xRCCY1OLyonHA86HT_TnRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
