@@ -10,7 +10,7 @@ const index = () => {
       <Stack.Screen
         options={{ title: "Count Down", headerTitleAlign: "center" }}
       />
-      <StatusBar style="auto" />
+      {/* <StatusBar style="auto" /> */}
       <CountDown targetDate="2024-08-25T21:59:59" />
     </View>
   );

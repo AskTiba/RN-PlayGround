@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Switch } from 'react-native';
 import Animated, { FadeInDown, Layout, useAnimatedStyle, withTiming } from 'react-native-reanimated';
 import { Ionicons } from '@expo/vector-icons';
+import { useTheme } from '../../ThemeContext';
 
 interface TodoItem {
   text: string;
@@ -15,7 +16,7 @@ interface TodoItem {
 const TodoApp = () => {
   const [task, setTask] = useState<string>('');
   const [todoList, setTodoList] = useState<TodoItem[]>([]);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const { isDarkMode, toggleDarkMode, colors } = useTheme();
 
   // Function to add the task to the list
   const addTask = () => {
@@ -54,9 +55,6 @@ const TodoApp = () => {
     setTodoList(updatedList);
   };
 
-  // Function to toggle dark mode
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
-
   // Define theme colors
   const theme = {
     background: isDarkMode ? '#1F2937' : '#F3F4F6',
@@ -73,14 +71,10 @@ const TodoApp = () => {
   });
 
   return (
-    <View className={`flex-1 p-4`} style={{ backgroundColor: theme.background }}>
-      <StatusBar style={isDarkMode ? 'light' : 'dark'} />
+    <View className={`flex-1 p-4`} style={{ backgroundColor: colors.background }}>
+      {/* <StatusBar style={isDarkMode ? 'light' : 'dark'} /> */}
       <Stack.Screen options={{
         headerTitle: 'To-Do List',
-        headerStyle: {
-          backgroundColor: theme.headerBackground,
-        },
-        headerTintColor: '#fff',
         headerTitleStyle: {
           fontWeight: 'bold',
           fontFamily: 'Inter_900Black',
@@ -102,7 +96,7 @@ const TodoApp = () => {
       <View className={`flex-row mb-4`}>
         <TextInput
           className={`flex-1 border border-gray-300 rounded px-3 py-2`}
-          style={{ backgroundColor: theme.inputBackground, color: theme.text }}
+          style={{ backgroundColor: colors.inputBackground, color: colors.text }}
           placeholder="Add a new task"
           placeholderTextColor={isDarkMode ? '#9CA3AF' : '#6B7280'}
           value={task}
@@ -118,12 +112,12 @@ const TodoApp = () => {
         keyExtractor={(_, index) => index.toString()}
         renderItem={({ item, index }) => (
           <Animated.View layout={Layout}>
-            <View className={`flex-row justify-between items-center mb-2 p-3 rounded shadow`} style={{ backgroundColor: theme.itemBackground }}>
+            <View className={`flex-row justify-between items-center mb-2 p-3 rounded shadow`} style={{ backgroundColor: colors.itemBackground }}>
               {/* Toggle between display mode and edit mode */}
               {item.isEditing ? (
                 <TextInput
                   className={`flex-1 border-b border-gray-300`}
-                  style={{ color: theme.text }}
+                  style={{ color: colors.text }}
                   value={item.text}
                   onChangeText={(newText) => saveEditedTask(index, newText)}
                   onSubmitEditing={() => saveEditedTask(index, item.text)}
@@ -131,7 +125,7 @@ const TodoApp = () => {
               ) : (
                 <TouchableOpacity className={`flex-1`} onPress={() => toggleComplete(index)}>
                   <Text
-                    style={{ color: item.completed ? (isDarkMode ? '#9CA3AF' : '#6B7280') : theme.text }}
+                    style={{ color: item.completed ? (isDarkMode ? '#9CA3AF' : '#6B7280') : colors.text }}
                     className={`${item.completed ? 'line-through' : ''}`}>
                     {item.text}
                   </Text>
