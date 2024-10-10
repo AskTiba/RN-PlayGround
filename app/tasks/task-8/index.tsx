@@ -12,21 +12,13 @@ export default function index() {
     >
       <Stack.Screen
         options={{
-          headerBackground() {
-            <LinearGradient
-              colors={["#06e1e1", "#bbfaff", "#06e1e1"]}
-              className="absolute left-0 right-0 top-0 h-full"
-            ></LinearGradient>;
-          },
           headerTitle: "Tables",
           headerTitleAlign: "center",
           headerTitleStyle: {
             fontSize: 18,
             fontWeight: "bold",
           },
-          headerStyle: {
-            backgroundColor: "#06e1e1",
-          },
+          
         }}
       />
       <View className="flex-1 justify-between">
