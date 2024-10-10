@@ -3,11 +3,11 @@ import {
   DefaultTheme,
   ThemeProvider,
 } from "@react-navigation/native";
-import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import {  useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 
@@ -16,7 +16,7 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
+  const [loaded] = useFonts({Inter_900Black,
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
     RubikGlitchPro: require("../assets/fonts/RubikGlitchPop-Regular.ttf"),
   });
