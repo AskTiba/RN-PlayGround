@@ -25,7 +25,7 @@ const lightColors: ThemeColors = {
 };
 
 const darkColors: ThemeColors = {
-  background: '#1F2937',
+  background: '#697565',
   text: '#F9FAFB',
   inputBackground: '#374151',
   itemBackground: '#374151',
