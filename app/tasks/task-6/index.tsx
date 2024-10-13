@@ -6,7 +6,7 @@ import {
   Dimensions,
 } from "react-native";
 import React from "react";
-import { Stack } from "expo-router";
+import { router, Stack } from "expo-router";
 import AdaptiveButton from "@/components/navigation/AdaptiveButton";
 import { cardData, CardData } from "./data";
 
@@ -38,10 +38,10 @@ export default function index() {
             fontSize: 17, // Adjust the font size
             fontWeight: "bold", // Adjust the font weight
           },
-          headerStyle: {
-            // height: 100, // Set the desired height for the header
-            backgroundColor: "#ebffff", // Optional: set the background color
-          },
+          // headerStyle: {
+          //   // height: 100, // Set the desired height for the header
+          //   // backgroundColor: "#32cd32", // Optional: set the background color
+          // },
           // headerLeft: () => (
           //   <TouchableOpacity
           //     onPress={() => router.back()}
@@ -80,7 +80,8 @@ export default function index() {
           title="Continue"
           variant="secondary"
           size="large"
-          // onPress={() => console.log('Secondary action')}
+          // onPress={()=>{router.push('/tasks/task-2')}}
+          onPress={() => router.push("./testing")}
           className="mt-4 bg-[#d4af37]"
         />
       </View>

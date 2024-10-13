@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
-import React, { useRef, useState } from "react";
+import {Text, View } from "react-native";
+import React, { useState } from "react";
 import LottieView from "lottie-react-native";
 import { Stack } from "expo-router";
 import { BlurView } from "expo-blur";
@@ -7,63 +7,64 @@ import IOSSwitch from "@/components/core/IOSSwitch";
 import AndroidLoader from "@/components/core/AndroidLoader";
 import AdaptiveButton from "@/components/navigation/AdaptiveButton";
 
-const index = () => {
-  const animation = useRef(null);
+const Index = () => {
   const [isEnabled, setIsEnabled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
-  const toggleSwitch = () => {
-    setIsEnabled(previousState => !previousState);
+  const toggleSwitch = () => setIsEnabled(prev => !prev);
+
+  const handleConfirm = (date: Date) => {
+    setSelectedDate(date);
+    console.log('Selected Date:', date);
   };
 
   const handlePress = () => {
     setIsLoading(true);
-    // Simulate an async operation
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 30000);
+    setTimeout(() => setIsLoading(false), 3000); // Reduced to 3 seconds for better UX
   };
 
   return (
     <BlurView
       intensity={30}
       tint="dark"
-      className="h-screen w-full flex-auto justify-center items-center"
+      className="flex-1 justify-center items-center"
     >
       <Stack.Screen
-        options={{ title: "Lottie Animations", headerTitleAlign: "center" }}
+        options={{ title: "Task 2 Demo", headerTitleAlign: "center" }}
       />
-      {/* <LottieView
-        autoPlay
-        // ref={animation}
-        style={{
-          width: 200,
-          height: 200,
-          backgroundColor: "#eee",
-        }}
-        source={require("@assets/lotties/welcome.json")}
-      /> */}
-      <View className="flex-1 justify-center items-center">
-      <Text>Toggle Switch Example</Text>
-      <IOSSwitch
-        value={isEnabled}
-        onValueChange={toggleSwitch}
-      />
-      <Text>Switch is {isEnabled ? 'ON' : 'OFF'}</Text>
-    </View>
-    <View className="flex-1 justify-center items-center">
-      <Text className="text-lg mb-4">Android Loader Example</Text>
       
-      {isLoading ? (
-        <AndroidLoader size={50} color="#4285F4" isLoading={true} />
-      ) : (
-        <AdaptiveButton title="Start Loading" onPress={handlePress} />
-      )}
-    </View>
+      <View className="w-full p-4 space-y-8">
+        <View className="items-center">
+          <Text className="text-lg mb-2">Toggle Switch</Text>
+          <IOSSwitch value={isEnabled} onValueChange={toggleSwitch} />
+          <Text className="mt-2">Switch is {isEnabled ? 'ON' : 'OFF'}</Text>
+        </View>
+
+        <View className="items-center">
+          <Text className="text-lg mb-4">Android Loader</Text>
+          {isLoading ? (
+            <AndroidLoader size={50} color="#4285F4" isLoading={true} />
+          ) : (
+            <AdaptiveButton title="Start Loading" onPress={handlePress} />
+          )}
+        </View>
+
+        {/* <View className="items-center">
+          <Text className="text-lg mb-4">Date and Time Picker</Text>
+          <CustomDateTimePicker
+            mode="datetime"
+            onConfirm={handleConfirm}
+          />
+          {selectedDate && (
+            <Text className="mt-2">
+              Selected: {selectedDate.toLocaleString()}
+            </Text>
+          )}
+        </View> */}
+      </View>
     </BlurView>
   );
 };
 
-export default index;
-
-const styles = StyleSheet.create({});
+export default Index;
