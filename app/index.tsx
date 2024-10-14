@@ -17,14 +17,14 @@ const RootIndex = () => {
             fontSize: 17, // Adjust the font size
             fontWeight: "bold", // Adjust the font weight
           },
-          headerStyle: {
-            // height: 100, // Set the desired height for the header
-            backgroundColor: "#fdd700", // Optional: set the background color
-          },
+          // headerStyle: {
+          //   // height: 100, // Set the desired height for the header
+          //   backgroundColor: "#fdd700", // Optional: set the background color
+          // },
           // headerLeft: () => (
           //   <TouchableOpacity
           //     onPress={() => router.back()}
-          //     activeOpacity={0.9}
+      //     activeOpacity={0.9}
           //     className="ml-4"
           //   >
           //     <ChevronLeft stroke={"#616161"} width={24} height={24} />
